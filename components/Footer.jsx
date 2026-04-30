@@ -59,7 +59,7 @@ export default function Footer() {
         .ft-nav-link {
           display: block;
           font-size: 12.5px;
-          color: rgba(240,236,228,0.5);
+          color: #F0ECE4;
           text-decoration: none;
           padding: 5px 0;
           padding-left: 0;
@@ -69,7 +69,7 @@ export default function Footer() {
         .ft-nav-link:hover { color: #279B51; padding-left: 6px; }
         .ft-contact-val {
           font-size: 12.5px;
-          color: rgba(240,236,228,0.6);
+          color: #F0ECE4;
           text-decoration: none;
           display: block;
           line-height: 1.7;
@@ -200,7 +200,7 @@ export default function Footer() {
               <div style={{ fontSize: 9, letterSpacing: "2.5px", textTransform: "uppercase", color: "#279B51", marginBottom: 14 }}>
                 Automatic Gates Solution
               </div>
-              <p style={{ fontSize: 13, color: "rgba(240,236,228,0.5)", lineHeight: 1.75, marginBottom: 20 }}>
+              <p style={{ fontSize: 13, color: "#F0ECE4", lineHeight: 1.75, marginBottom: 20 }}>
                 Complete residential and commercial security solutions. Specializing in automatic gate installation and maintenance across Karachi since 2014.
               </p>
               <a
@@ -244,11 +244,11 @@ export default function Footer() {
                     <item.icon size={13} />
                   </div>
                   <div>
-                    <div style={{ fontSize: 9, letterSpacing: "1.5px", textTransform: "uppercase", color: "rgba(240,236,228,0.3)", marginBottom: 3 }}>
+                    <div style={{ fontSize: 9, letterSpacing: "1.5px", textTransform: "uppercase", color: "#F0ECE4", marginBottom: 3 }}>
                       {item.label}
                     </div>
                     {item.content && (
-                      <span style={{ fontSize: 12.5, color: "rgba(240,236,228,0.6)", lineHeight: 1.7 }}>
+                      <span style={{ fontSize: 12.5, color: "#F0ECE4", lineHeight: 1.7 }}>
                         {item.content}
                       </span>
                     )}
@@ -279,7 +279,7 @@ export default function Footer() {
               paddingBottom: 24,
             }}
           >
-            <span style={{ fontSize: 11, color: "rgba(240,236,228,0.3)", letterSpacing: "0.3px" }}>
+            <span style={{ fontSize: 11, color: "#F0ECE4", letterSpacing: "0.3px" }}>
               © 2026 <span style={{ color: "rgba(39,155,81,0.7)" }}>Safety Links</span> Automatic Gates Solution. All Rights Reserved.
             </span>
             <span className="ft-serif" style={{ fontSize: 13, fontStyle: "italic", color: "rgba(240,236,228,0.2)" }}>

@@ -43,7 +43,7 @@ export default function HeroSection() {
   const [current, setCurrent] = useState(0);
   const [animKey, setAnimKey] = useState(0);
 
-  const goTo = useCallback((idx) => {
+  const goTo = useCallback((/** @type {number} */ idx) => {
     setCurrent((idx + slides.length) % slides.length);
     setAnimKey((k) => k + 1);
   }, []);
@@ -53,14 +53,14 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, [current, goTo]);
 
-  const handleScroll = (href) => {
+  const handleScroll = (/** @type {string} */ href) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
-      className="relative overflow-hidden"
-      style={{ height: "100vh", minHeight: 600, background: "#0a1628", fontFamily: "'DM Sans', sans-serif" }}
+      className="relative overflow-hidden h-screen min-h-[600px] bg-[#0a1628]"
+      style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
       {/* Import fonts */}
       <style>{`
@@ -79,19 +79,15 @@ export default function HeroSection() {
 
       {/* Decorative left line */}
       <div
-        className="absolute left-0 top-0 z-10 w-1"
-        style={{
-          bottom: 80,
-          background: "linear-gradient(to bottom, transparent, #279B51 30%, #279B51 70%, transparent)",
-          opacity: 0.5,
-        }}
+        className="absolute left-0 top-0 z-10 w-1 bottom-20 opacity-50"
+        style={{ background: "linear-gradient(to bottom, transparent, #279B51 30%, #279B51 70%, transparent)" }}
       />
 
       {/* Slides */}
       {slides.map((slide, idx) => (
         <div
           key={idx}
-          className="absolute inset-0 transition-opacity duration-900"
+          className="absolute inset-0"
           style={{ opacity: idx === current ? 1 : 0, transition: "opacity 0.9s cubic-bezier(0.4,0,0.2,1)" }}
         >
           <img
@@ -100,13 +96,10 @@ export default function HeroSection() {
             className="w-full h-full object-cover"
             style={{ transform: idx === current ? "scale(1)" : "scale(1.05)", transition: "transform 7s ease-out" }}
           />
-          {/* Overlay */}
+          {/* Overlays — complex gradients kept as inline */}
           <div
             className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(105deg, rgba(8,18,40,0.92) 0%, rgba(8,18,40,0.65) 55%, rgba(8,18,40,0.2) 100%)",
-            }}
+            style={{ background: "linear-gradient(105deg, rgba(8,18,40,0.92) 0%, rgba(8,18,40,0.65) 55%, rgba(8,18,40,0.2) 100%)" }}
           />
           <div
             className="absolute inset-0"
@@ -115,110 +108,56 @@ export default function HeroSection() {
         </div>
       ))}
 
-      {/* Slide counter */}
+      {/* Slide counter — hidden on small screens to avoid crowding */}
       <div
-        className="absolute right-12 top-9 z-20"
-        style={{ color: "rgba(240,236,228,0.5)", fontFamily: "'Cormorant Garamond', serif", fontSize: 14 }}
+        className="absolute right-8 md:right-12 top-9 z-20 hidden sm:block text-[14px] text-[rgba(240,236,228,0.5)]"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
-        <span style={{ color: "#279B51", fontSize: 22, fontWeight: 600 }}>
+        <span className="text-[#279B51] text-[22px] font-semibold">
           {String(current + 1).padStart(2, "0")}
         </span>{" "}
         / 03
       </div>
 
-      {/* Main content */}
+      {/* Main content
+          pt-16 = 64px on mobile (matches mobile navbar height)
+          md:pt-[100px] = 100px on desktop (36px info bar + 64px main nav)
+          This prevents content from hiding behind the fixed navbar */}
       <div
         key={animKey}
-        className="relative z-10 h-full flex flex-col justify-center"
-        style={{ padding: "0 48px 80px" }}
+        className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 md:px-12 pt-16 md:pt-[100px] pb-20"
       >
-        <div style={{ maxWidth: 560 }}>
+        <div className="max-w-[560px] w-full">
           {/* Tag */}
-          <div
-            className="anim-tag"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              background: "rgba(39, 155, 81, 0.15)",
-              border: "1px solid rgba(39, 155, 81, 0.4)",
-              color: "#279B51",
-              fontSize: 11,
-              fontWeight: 500,
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              padding: "6px 14px",
-              borderRadius: 2,
-              marginBottom: 20,
-            }}
-          >
-            <span style={{ width: 18, height: 1, background: "#279B51", display: "inline-block" }} />
+          <div className="anim-tag inline-flex items-center gap-1.5 bg-[rgba(39,155,81,0.15)] border border-[rgba(39,155,81,0.4)] text-[#279B51] text-[11px] font-medium tracking-[2px] uppercase px-3.5 py-1.5 rounded-sm mb-5">
+            <span className="inline-block w-[18px] h-px bg-[#279B51]" />
             {slides[current].tag}
           </div>
 
-          {/* Title */}
+          {/* Title — clamp() kept as inline since Tailwind can't express it natively */}
           <h1
-            className="hero-title-el anim-title"
-            style={{
-              fontSize: "clamp(40px, 6vw, 64px)",
-              fontWeight: 700,
-              color: "#f0ece4",
-              lineHeight: 1.05,
-              letterSpacing: "-1px",
-              marginBottom: 18,
-            }}
+            className="hero-title-el anim-title font-bold text-[#f0ece4] leading-[1.05] tracking-[-1px] mb-[18px]"
+            style={{ fontSize: "clamp(32px, 6vw, 64px)" }}
           >
             {slides[current].title}
           </h1>
 
           {/* Description */}
-          <p
-            className="anim-desc"
-            style={{
-              fontSize: 15,
-              color: "rgba(240,236,228,0.65)",
-              lineHeight: 1.75,
-              maxWidth: 420,
-              marginBottom: 32,
-              fontWeight: 300,
-            }}
-          >
+          <p className="anim-desc text-[15px] text-[rgba(240,236,228,0.65)] leading-[1.75] max-w-[420px] mb-8 font-light">
             {slides[current].description}
           </p>
 
           {/* Buttons */}
-          <div className="anim-btns" style={{ display: "flex", gap: 12 }}>
+          <div className="anim-btns flex flex-col sm:flex-row gap-3">
             <button
               onClick={() => handleScroll(slides[current].href)}
-              style={{
-                background: "#279B51",
-                color: "#fff",
-                fontSize: 13,
-                fontWeight: 500,
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                padding: "13px 28px",
-                border: "none",
-                borderRadius: 2,
-                cursor: "pointer",
-              }}
+              className="w-full sm:w-auto bg-[#279B51] text-white text-[13px] font-medium tracking-[1px] uppercase py-[13px] px-7 border-0 rounded-sm cursor-pointer"
             >
               {slides[current].cta}
             </button>
             <button
               onClick={() => handleScroll("#contact")}
-              style={{
-                background: "transparent",
-                color: "#f0ece4",
-                fontSize: 13,
-                fontWeight: 400,
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                padding: "13px 28px",
-                border: "1px solid rgba(240,236,228,0.3)",
-                borderRadius: 2,
-                cursor: "pointer",
-              }}
+              className="w-full sm:w-auto bg-transparent text-[#f0ece4] text-[13px] font-normal tracking-[1px] uppercase py-[13px] px-7 border border-[rgba(240,236,228,0.3)] rounded-sm cursor-pointer"
             >
               Get Free Quote
             </button>
@@ -226,11 +165,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Vertical nav arrows */}
-      <div
-        className="absolute z-20"
-        style={{ right: 48, top: "50%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", gap: 8 }}
-      >
+      {/* Vertical nav arrows — hidden on mobile to avoid layout conflict */}
+      <div className="absolute z-20 right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 hidden sm:flex flex-col gap-2">
         {[
           { Icon: ChevronUp, action: () => goTo(current - 1) },
           { Icon: ChevronDown, action: () => goTo(current + 1) },
@@ -238,18 +174,7 @@ export default function HeroSection() {
           <button
             key={i}
             onClick={action}
-            style={{
-              width: 44,
-              height: 44,
-              background: "rgba(240,236,228,0.08)",
-              border: "1px solid rgba(240,236,228,0.18)",
-              color: "#f0ece4",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              borderRadius: 2,
-            }}
+            className="w-11 h-11 bg-[rgba(240,236,228,0.08)] border border-[rgba(240,236,228,0.18)] text-[#f0ece4] flex items-center justify-center cursor-pointer rounded-sm"
           >
             <Icon size={16} />
           </button>
@@ -257,79 +182,41 @@ export default function HeroSection() {
       </div>
 
       {/* Progress dots */}
-      <div
-        className="absolute z-20"
-        style={{ bottom: 88, left: 48, display: "flex", gap: 6, alignItems: "center" }}
-      >
+      <div className="absolute z-20 bottom-[88px] left-4 sm:left-8 md:left-12 flex gap-1.5 items-center">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => goTo(idx)}
+            className="h-[2px] border-none cursor-pointer p-0 rounded-sm transition-all duration-300"
             style={{
-              height: 2,
               width: idx === current ? 48 : 24,
               background: idx === current ? "#279B51" : "rgba(240,236,228,0.25)",
-              borderRadius: 1,
-              border: "none",
-              cursor: "pointer",
-              transition: "all 0.3s",
-              padding: 0,
             }}
           />
         ))}
       </div>
 
       {/* Stats bar */}
-      <div
-        className="absolute bottom-0 left-0 right-0 z-20"
-        style={{ borderTop: "1px solid rgba(196,158,68,0.2)", background: "rgba(8,18,40,0.85)" }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            height: 78,
-          }}
-        >
+      <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-[rgba(196,158,68,0.2)] bg-[rgba(8,18,40,0.85)]">
+        <div className="grid grid-cols-3 h-[78px]">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 14,
-                padding: "0 32px",
-                borderRight: i < 2 ? "1px solid rgba(196,158,68,0.15)" : "none",
-              }}
+              className={`flex items-center gap-2 md:gap-3.5 px-2 sm:px-5 md:px-8 ${
+                i < 2 ? "border-r border-[rgba(196,158,68,0.15)]" : ""
+              }`}
             >
-              <div
-                style={{
-                  width: 36,
-                  height: 36,
-                  border: "1px solid rgba(196,158,68,0.35)",
-                  borderRadius: 2,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#279B51",
-                  flexShrink: 0,
-                }}
-              >
-                <stat.icon size={16} />
+              <div className="w-7 h-7 md:w-9 md:h-9 border border-[rgba(196,158,68,0.35)] rounded-sm flex items-center justify-center text-[#279B51] shrink-0">
+                <stat.icon size={14} />
               </div>
               <div>
                 <div
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: 26,
-                    fontWeight: 700,
-                    color: "#f0ece4",
-                    lineHeight: 1,
-                  }}
+                  className="text-xl md:text-[26px] font-bold text-[#f0ece4] leading-none"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   {stat.value}
                 </div>
-                <div style={{ fontSize: 11, color: "rgba(240,236,228,0.45)", letterSpacing: "0.5px", marginTop: 2 }}>
+                <div className="text-[9px] sm:text-[11px] text-[rgba(240,236,228,0.45)] tracking-[0.5px] mt-0.5">
                   {stat.label}
                 </div>
               </div>

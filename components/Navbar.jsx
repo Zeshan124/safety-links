@@ -22,12 +22,12 @@ const navLinks = [
       { label: "Dock Leveler", href: "/services#dock-leveler" },
     ],
   },
-  { label: "Projects", href: "/projects" },
-  { label: "Clients", href: "/clients" },
-  { label: "Our Work", href: "/our-work" },
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Projects", href: "#" },
+  { label: "Clients", href: "#" },
+  { label: "Our Work", href: "#" },
+  { label: "About", href: "#" },
+  { label: "Blog", href: "#" },
+  { label: "Contact", href: "#" },
 ];
 
 export default function Navbar() {
@@ -55,7 +55,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
-  const isActive = (href) => {
+  const isActive = (/** @type {string} */ href) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
@@ -140,7 +140,6 @@ export default function Navbar() {
           border-radius: 2px;
           cursor: pointer;
           transition: all 0.2s;
-          display: flex;
           align-items: center;
           gap: 7px;
           white-space: nowrap;
@@ -189,16 +188,16 @@ export default function Navbar() {
           className="hidden md:flex items-center justify-between px-8"
           style={{ background: "#123A65", height: 36, borderBottom: "1px solid rgba(39,155,81,0.25)" }}
         >
-          <div className="flex items-center gap-1.5" style={{ color: "rgba(255,255,255,0.55)", fontSize: 11 }}>
+          <div className="flex items-center gap-1.5" style={{ color: "#F0ECE4", fontSize: 11 }}>
             <MapPin size={11} style={{ color: "#279B51", flexShrink: 0 }} />
             12-C Mezzanine Floor, Street 07 Badar Commercial DHA Phase V, Karachi
           </div>
           <div className="flex items-center gap-5">
-            <span className="flex items-center gap-1.5" style={{ color: "rgba(255,255,255,0.55)", fontSize: 11 }}>
+            <span className="flex items-center gap-1.5" style={{ color: "#F0ECE4", fontSize: 11 }}>
               <Clock size={11} style={{ color: "#279B51" }} />
               Mon–Sat: 10:00 AM – 6:00 PM
             </span>
-            <span className="flex items-center gap-1.5" style={{ color: "rgba(255,255,255,0.55)", fontSize: 11 }}>
+            <span className="flex items-center gap-1.5" style={{ color: "#F0ECE4", fontSize: 11 }}>
               <Phone size={11} style={{ color: "#279B51" }} />
               021-35244550 | 0321-2508451
             </span>
@@ -422,8 +421,7 @@ export default function Navbar() {
               }}>
                 <a
                   href="tel:02135244550"
-                  className="nb-cta-btn"
-                  style={{ justifyContent: "center", width: "100%", fontSize: 12, padding: "13px 20px", marginBottom: 16 }}
+                  className="nb-cta-btn flex justify-center items-center w-full text-xs py-3.5 px-5 mb-4"
                 >
                   <Phone size={14} /> Call Now — 021-35244550
                 </a>
