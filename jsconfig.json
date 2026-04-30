@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["esnext", "dom"],
+    "target": "esnext",
+    "checkJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": []
+  },
+  "include": [
+    "app/**/*.js", "app/**/*.jsx", "app/**/*.ts", "app/**/*.tsx",
+    "components/**/*.js", "components/**/*.jsx", "components/**/*.ts", "components/**/*.tsx",
+    "lib/**/*.js", "lib/**/*.jsx", "lib/**/*.ts", "lib/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "dist", "components/ui"]
+} 
