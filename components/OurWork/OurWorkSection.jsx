@@ -250,7 +250,7 @@ export default function OurWorkSection() {
                 overflow: "hidden",
               }}
             >
-              {stats.map((s, i) => (
+              {stats.map((s) => (
                 <div key={s.label} className="ow-stat-item">
                   <div className="ow-serif" style={{ fontSize: 32, fontWeight: 700, color: "#0f2d4a", lineHeight: 1 }}>
                     {s.value}
@@ -298,7 +298,7 @@ export default function OurWorkSection() {
                     alt={item.title}
                     className="ow-card-img"
                     style={{ minHeight: isAll && item.tall ? 416 : 200 }}
-                    onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"; }}
+                    onError={(e) => { /** @type {HTMLImageElement} */ (e.target).src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"; }}
                   />
                   <div className="ow-card-overlay" />
                   <div className="ow-card-line" />

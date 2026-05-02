@@ -9,14 +9,14 @@ import { getAllPosts, getAllCategories } from "@/lib/blog";
 const posts = getAllPosts();
 const categories = getAllCategories();
 
-function formatDate(iso) {
+function formatDate(/** @type {string} */ iso) {
   return new Date(iso).toLocaleDateString("en-PK", { day: "numeric", month: "long", year: "numeric" });
 }
 
 export default function BlogSection() {
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? posts : posts.filter((p) => p.category === active);
-  const [featured, ...rest] = posts.filter((p) => p.featured);
+  const [featured] = posts.filter((p) => p.featured);
   const showFeatured = active === "All";
 
   return (
@@ -217,7 +217,7 @@ export default function BlogSection() {
                       <Link key={post.slug} href={`/blog/${post.slug}`} className="bl-card" style={{ textDecoration: "none" }}>
                         {/* Image */}
                         <div style={{ position: "relative", height: 200, overflow: "hidden", background: "#d1cdc5", flexShrink: 0 }}>
-                          <img src={post.image} alt={post.title} className="bl-card-img" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"; }} />
+                          <img src={post.image} alt={post.title} className="bl-card-img" onError={(e) => { /** @type {HTMLImageElement} */ (e.target).src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"; }} />
                           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,22,40,0.4) 0%, transparent 50%)" }} />
                           <div className="bl-card-line" />
                           <div style={{ position: "absolute", top: 12, left: 12, zIndex: 2 }}>

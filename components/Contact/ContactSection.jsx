@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { MapPin, Mail, Phone, MessageCircle, Clock, Send, CheckCircle } from "lucide-react";
 import PageHero from "@/components/Projects/PageHero";
 
