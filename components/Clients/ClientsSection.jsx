@@ -20,20 +20,24 @@ const sectors = [
   { icon: BookOpen,    label: "Education",    desc: "Schools, colleges and university campus entrances." },
 ];
 
-// Placeholder partner entries — replace `logo` src with real image paths once available
 const partners = [
-  { id: 1,  name: "Partner 1", logo: "/images/clients/cpec.png" },
-  { id: 2,  name: "Partner 2", logo: "/images/clients/pia.png" },
-  { id: 3,  name: "Partner 3", logo: "/images/clients/partner-3.svg" },
-  { id: 4,  name: "Partner 4", logo: "/images/clients/partner-4.svg" },
-  { id: 5,  name: "Partner 5", logo: "/images/clients/partner-5.svg" },
-  { id: 6,  name: "Partner 6", logo: "/images/clients/partner-6.svg" },
-  { id: 7,  name: "Partner 7", logo: "/images/clients/partner-7.svg" },
-  { id: 8,  name: "Partner 8", logo: "/images/clients/partner-8.svg" },
-  { id: 9,  name: "Partner 9", logo: "/images/clients/partner-9.svg" },
-  { id: 10, name: "Partner 10", logo: "/images/clients/partner-10.svg" },
-  { id: 11, name: "Partner 11", logo: "/images/clients/partner-11.svg" },
-  { id: 12, name: "Partner 12", logo: "/images/clients/partner-12.svg" },
+  { id: 1,  name: "Al-Murtuza School",              logo: "/images/clients/al-murtuza-school.png" },
+  { id: 2,  name: "Beaconhouse School System",       logo: "/images/clients/beaconhouse-school-system.png" },
+  { id: 3,  name: "CPEC",                            logo: "/images/clients/cpec.png" },
+  { id: 4,  name: "DIG Traffic Office",              logo: "/images/clients/DIG-Traffic-Office.png" },
+  { id: 5,  name: "Driving License Branches",        logo: "/images/clients/driving-license-branches.png" },
+  { id: 6,  name: "Horizon Tower Karachi",           logo: "/images/clients/horizon-tower-karachi.png" },
+  { id: 7,  name: "I.G House",                       logo: "/images/clients/i.g-house.png" },
+  { id: 8,  name: "K.R.C.N.S",                       logo: "/images/clients/k-r-c-n-s.png" },
+  { id: 9,  name: "MTM",                             logo: "/images/clients/mtm.png" },
+  { id: 10, name: "Omega",                           logo: "/images/clients/omega.png" },
+  { id: 11, name: "Pakistan Navy College",           logo: "/images/clients/pakistan-navy-college.png" },
+  { id: 12, name: "PIA",                             logo: "/images/clients/pia.png" },
+  { id: 13, name: "Sindh Traffic Police",            logo: "/images/clients/sindh-traffic-police.png" },
+  { id: 14, name: "Surfactant Chemicals Company",    logo: "/images/clients/surfactant-chemicals-company.png" },
+  { id: 15, name: "Tapal's House",                   logo: "/images/clients/tapals-house.png" },
+  { id: 16, name: "UNICEF",                          logo: "/images/clients/unicef.png" },
+  { id: 17, name: "Union Power Engineering",         logo: "/images/clients/union-power-engineering.png" },
 ];
 
 export default function ClientsSection() {
@@ -224,25 +228,10 @@ export default function ClientsSection() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {partners.map((p) => (
                   <div key={p.id} className="cl-logo-card">
-                    {/* Replace the div below with an <img> once you have the real logos */}
-                    <div style={{
-                      width: "100%", height: 44,
-                      background: "rgba(39,155,81,0.08)",
-                      border: "1px dashed rgba(39,155,81,0.3)",
-                      borderRadius: 2,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 9,
-                      letterSpacing: "1px",
-                      textTransform: "uppercase",
-                      color: "rgba(39,155,81,0.5)",
-                    }}>
-                      {p.name}
-                    </div>
+                    <img src={p.logo} alt={p.name} />
                   </div>
                 ))}
               </div>

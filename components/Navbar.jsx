@@ -12,22 +12,22 @@ const navLinks = [
     label: "Services",
     href: "/services",
     children: [
-      { label: "Automatic Sliding Gates", href: "/services#automatic-sliding-gates" },
-      { label: "Automatic Swing Gates", href: "/services#automatic-swing-gates" },
-      { label: "Automatic Glass Door", href: "/services#automatic-glass-door" },
-      { label: "Barrier Gates", href: "/services#barrier-gates" },
-      { label: "High Speed PVC Rolling Door", href: "/services#high-speed-pvc-rolling-door" },
-      { label: "Roller Shutter & Motorize Shutter", href: "/services#roller-shutter-motorize-shutter" },
-      { label: "Road Blocker", href: "/services#road-blocker" },
-      { label: "Dock Leveler", href: "/services#dock-leveler" },
+      { label: "Automatic Sliding Gates",        href: "/services/automatic-sliding-gates"        },
+      { label: "Automatic Swing Gates",           href: "/services/automatic-swing-gates"           },
+      { label: "Automatic Glass Door",            href: "/services/automatic-glass-door"            },
+      { label: "Barrier Gates",                   href: "/services/barrier-gates"                   },
+      { label: "High Speed PVC Rolling Door",     href: "/services/high-speed-pvc-rolling-door"     },
+      { label: "Roller Shutter & Motorize Shutter", href: "/services/roller-shutter-motorize-shutter" },
+      { label: "Road Blocker",                    href: "/services/road-blocker"                    },
+      { label: "Dock Leveler",                    href: "/services/dock-leveler"                    },
     ],
   },
-  { label: "Projects", href: "#" },
-  { label: "Clients", href: "#" },
-  { label: "Our Work", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Projects", href: "/projects" },
+  { label: "Clients",  href: "/clients"  },
+  { label: "Our Work", href: "/our-work" },
+  { label: "About",    href: "/about"    },
+  { label: "Blog",     href: "/blog"     },
+  { label: "Contact",  href: "/contact"  },
 ];
 
 export default function Navbar() {
@@ -211,10 +211,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="shrink-0" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
               <Image
-                src="/images/safety-link.svg"
+                src="/images/safety-link.png"
                 alt="Safety Links"
-                width={160}
-                height={44}
+                width={180}
+                height={50}
                 style={{ objectFit: "contain" }}
                 priority
               />

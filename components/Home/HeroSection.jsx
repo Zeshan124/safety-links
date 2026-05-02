@@ -99,7 +99,7 @@ export default function HeroSection() {
           {/* Overlays — complex gradients kept as inline */}
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(105deg, rgba(8,18,40,0.92) 0%, rgba(8,18,40,0.65) 55%, rgba(8,18,40,0.2) 100%)" }}
+            style={{ background: "linear-gradient(105deg, rgba(8,18,40,0.92) 0%, rgba(8,18,40,0.65) 25%, rgba(8,18,40,0.2) 100%)" }}
           />
           <div
             className="absolute inset-0"

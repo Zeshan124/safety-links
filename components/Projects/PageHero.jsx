@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
+/**
+ * @param {{ title: string, subtitle?: string, breadcrumb?: string, image?: string, titleEm?: string }} props
+ */
 export default function PageHero({ title, subtitle, breadcrumb, image, titleEm }) {
   // titleEm lets you optionally split the title for italic emphasis
   // e.g. title="Featured" titleEm="Projects" renders: Featured <em>Projects</em>
@@ -62,7 +65,7 @@ export default function PageHero({ title, subtitle, breadcrumb, image, titleEm }
         @keyframes ph-grow { to { width: 80px; } }
       `}</style>
 
-      <div className="ph-font relative overflow-hidden" style={{ height: "clamp(240px, 30vw, 360px)" }}>
+      <div className="ph-font relative overflow-hidden" style={{ height: "clamp(440px, 30vw, 360px)" }}>
 
         {/* Background image */}
         <img
@@ -74,7 +77,7 @@ export default function PageHero({ title, subtitle, breadcrumb, image, titleEm }
         {/* Gradient overlays */}
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(105deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.65) 55%, rgba(10,22,40,0.25) 100%)",
+          background: "linear-gradient(105deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.65) 25%, rgba(10,22,40,0.25) 100%)",
         }} />
         <div style={{
           position: "absolute", inset: 0,

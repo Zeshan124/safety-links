@@ -82,7 +82,7 @@ const projects = [
 
 export default function ProjectsPage() {
   const [active, setActive] = useState("All");
-  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
+  const filtered = active === "All" ? projects : projects.filter((/** @type {{ category: string }} */ p) => p.category === active);
 
   return (
     <>
@@ -286,7 +286,7 @@ export default function ProjectsPage() {
                       alt={project.title}
                       className="pgp-card-img"
                       onError={(e) => {
-                        e.target.src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80";
+                        /** @type {HTMLImageElement} */ (e.target).src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80";
                       }}
                     />
                     {/* Overlay */}

@@ -59,7 +59,7 @@ const projects = [
 export default function Projects() {
   const [active, setActive] = useState("All");
 
-  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
+  const filtered = active === "All" ? projects : projects.filter((/** @type {{ category: string }} */ p) => p.category === active);
 
   return (
     <>
@@ -226,7 +226,7 @@ export default function Projects() {
                   alt={project.title}
                   className="pj-card-img"
                   onError={(e) => {
-                    e.target.src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80";
+                    /** @type {HTMLImageElement} */ (e.target).src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80";
                   }}
                 />
                 <div className="pj-card-overlay" />
