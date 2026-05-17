@@ -36,7 +36,7 @@ const services = [
     features: ["Custom Sizing", "Wind Resistant", "Insulated Options"],
   },
   {
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/images/home/barrier.jpeg",
     number: "05",
     title: "Barrier Gates",
     description:

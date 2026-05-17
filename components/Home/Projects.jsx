@@ -11,7 +11,7 @@ const projects = [
     category: "Swing Gates",
     title: "DHA Residence, Phase V",
     location: "Karachi",
-    image: "https://safetylinks.org/wp-content/uploads/2025/04/swing.jpg",
+    image: "/images/home/Swing_Gates_DHA.jpeg",
     number: "01",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     category: "Sliding Gates",
     title: "Commercial Complex",
     location: "Clifton, Karachi",
-    image: "https://safetylinks.org/wp-content/uploads/2025/04/sliding.jpg",
+    image: "/images/home/Sliding_door_1.jpeg",
     number: "02",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     category: "Glass Doors",
     title: "Corporate Office Entrance",
     location: "PECHS, Karachi",
-    image: "https://safetylinks.org/wp-content/uploads/2014/08/IMG_20240603_171658_399-1-1-scaled.jpg",
+    image: "/images/home/sensor_glass_door.jpg",
     number: "03",
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     category: "Swing Gates",
     title: "Gated Community",
     location: "Bahria Town, Karachi",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/images/home/Swing_Gates_Bahria.jpeg",
     number: "05",
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     category: "Sliding Gates",
     title: "Pharmaceutical Factory",
     location: "SITE Area, Karachi",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+    image: "/images/home/sliding_door_2.jpeg",
     number: "06",
   },
 ];

@@ -5,7 +5,7 @@ import { ChevronUp, ChevronDown, Shield, Star, Users } from "lucide-react";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
+    image: "/images/home/1.jpeg",
     tag: "Karachi's Most Trusted",
     title: ["Automatic ", <em key="e">Gate</em>, " Solutions"],
     description:
@@ -14,7 +14,7 @@ const slides = [
     href: "#services",
   },
   {
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80",
+     image: "/images/home/6.jpeg",
     tag: "Expert Engineers",
     title: ["Professional ", <em key="e">Installation</em>],
     description:
@@ -23,20 +23,29 @@ const slides = [
     href: "#projects",
   },
   {
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80",
+    image: "/images/home/7.jpeg",
     tag: "Modern Technology",
-    title: ["Advanced ", <em key="e">Security</em>, " Systems"],
+    title: ["Advanced ", <em key="e">Gate</em>, "  Motors"],
     description:
-      "Remote control access, safety sensors, intercom systems, and high-performance automation motors.",
+      "Remote control gate system with safety sensor system advance system control your gate by remote control",
     cta: "Our Work",
     href: "#our-work",
   },
+  {
+    image: "/images/home/3.jpeg",
+    tag: "Comprehensive Support",
+    title: ["Reliable ", <em key="e">Maintenance</em>, " & Support"],
+    description:
+      "Keep your gates operating smoothly with our expert maintenance, repairs, and 24/7 emergency support.",
+    cta: "Contact Us",
+    href: "#contact",
+  }
 ];
 
 const stats = [
-  { icon: Shield, label: "Projects Completed", value: "500+" },
-  { icon: Star, label: "Years of Experience", value: "10+" },
-  { icon: Users, label: "Happy Clients", value: "300+" },
+  { icon: Shield, label: "Projects Completed", value: "3000+" },
+  { icon: Star, label: "Years of Experience", value: "12+" },
+  { icon: Users, label: "Happy Clients", value: "2000+" },
 ];
 
 export default function HeroSection() {

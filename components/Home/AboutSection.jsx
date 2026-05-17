@@ -125,7 +125,7 @@ export default function AboutSection() {
                 boxShadow: "0 24px 64px rgba(10,22,40,0.18)",
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                  src="/images/home/Karachi_Leading.jpeg"
                   alt="Safety Links team at work"
                   style={{ width: "100%", height: 400, objectFit: "cover", display: "block" }}
                 />
