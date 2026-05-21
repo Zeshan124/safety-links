@@ -121,6 +121,9 @@ export default function HeroSection() {
               src={slide.image}
               alt={slide.tag}
               className="w-full h-full object-cover"
+              loading={idx === 0 ? "eager" : "lazy"}
+              fetchPriority={idx === 0 ? "high" : "low"}
+              decoding={idx === 0 ? "sync" : "async"}
               style={{ transform: idx === current ? "scale(1)" : "scale(1.05)", transition: "transform 2s ease-out" }}
             />
           </picture>
