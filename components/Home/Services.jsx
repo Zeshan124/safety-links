@@ -12,7 +12,7 @@ const services = [
     features: ["Single & Double Leaf", "Remote Control", "Safety Sensors"],
   },
   {
-    image: "https://safetylinks.org/wp-content/uploads/2025/04/sliding.jpg",
+    image: "/images/home/sliding_door_2.jpeg",
     number: "02",
     title: "Sliding Gates",
     description:
