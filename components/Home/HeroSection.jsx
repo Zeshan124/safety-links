@@ -16,7 +16,7 @@ const slides = [
   },
   {
     image: "/images/home/6.jpeg",
-    mobileImage: "/images/home/sliding_gate.jpeg",
+    mobileImage: "/images/home/door.jpeg",
     tag: "Expert Engineers",
     title: ["Professional ", <em key="e">Installation</em>],
     description:
@@ -36,14 +36,24 @@ const slides = [
   },
   {
     image: "/images/home/3.jpeg",
-    mobileImage: "/images/home/sensor.jpeg",
+    mobileImage: "/images/home/sensor_door.jpeg",
     tag: "Comprehensive Support",
     title: ["Reliable ", <em key="e">Maintenance</em>, " & Support"],
     description:
       "Keep your gates operating smoothly with our expert maintenance, repairs, and 24/7 emergency support.",
     cta: "Contact Us",
     href: "#contact",
-  }
+  },
+  {
+  image: "/images/home/barrier.jpeg",
+  mobileImage: "/images/home/barrier.jpeg",
+  tag: "Secure Access Control",
+  title: ["Advanced ", <em key="e">Barrier</em>, " Solutions"],
+  description:
+    "Enhance security and traffic management with durable automatic barriers designed for smooth, safe, and reliable access control.",
+  cta: "Contact Us",
+  href: "#contact",
+}
 ];
 
 const stats = [
@@ -111,17 +121,17 @@ export default function HeroSection() {
               src={slide.image}
               alt={slide.tag}
               className="w-full h-full object-cover"
-              style={{ transform: idx === current ? "scale(1)" : "scale(1.05)", transition: "transform 7s ease-out" }}
+              style={{ transform: idx === current ? "scale(1)" : "scale(1.05)", transition: "transform 2s ease-out" }}
             />
           </picture>
           {/* Overlays — complex gradients kept as inline */}
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(105deg, rgba(8,18,40,0.92) 0%, rgba(8,18,40,0.65) 25%, rgba(8,18,40,0.2) 100%)" }}
+            style={{ background: "linear-gradient(105deg, rgba(8,18,40,0.42) 0%, rgba(8,18,40,0.3) 22%, rgba(8,18,40,0.2) 50%)" }}
           />
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(to top, rgba(8,18,40,0.85) 0%, transparent 40%)" }}
+            style={{ background: "linear-gradient(to top, rgba(8,18,40,0.45) 0%, transparent 30%)" }}
           />
         </div>
       ))}
