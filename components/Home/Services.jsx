@@ -20,7 +20,7 @@ const services = [
     features: ["Heavy-Duty Motors", "Anti-Intrusion Lock", "Auto Reversal"],
   },
   {
-    image: "https://safetylinks.org/wp-content/uploads/2014/08/IMG_20240603_171658_399-1-1-scaled.jpg",
+    image: "/images/home/sensor_glass_door.jpeg",
     number: "03",
     title: "Glass Door Automation",
     description:

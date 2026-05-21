@@ -6,6 +6,7 @@ import { ChevronUp, ChevronDown, Shield, Star, Users } from "lucide-react";
 const slides = [
   {
     image: "/images/home/1.jpeg",
+    mobileImage: "/images/home/swing_gate.jpeg",
     tag: "Karachi's Most Trusted",
     title: ["Automatic ", <em key="e">Gate</em>, " Solutions"],
     description:
@@ -14,7 +15,8 @@ const slides = [
     href: "#services",
   },
   {
-     image: "/images/home/6.jpeg",
+    image: "/images/home/6.jpeg",
+    mobileImage: "/images/home/sliding_gate.jpeg",
     tag: "Expert Engineers",
     title: ["Professional ", <em key="e">Installation</em>],
     description:
@@ -24,6 +26,7 @@ const slides = [
   },
   {
     image: "/images/home/7.jpeg",
+    mobileImage: "/images/home/sensor_glass_door.jpeg",
     tag: "Modern Technology",
     title: ["Advanced ", <em key="e">Gate</em>, "  Motors"],
     description:
@@ -33,6 +36,7 @@ const slides = [
   },
   {
     image: "/images/home/3.jpeg",
+    mobileImage: "/images/home/sensor.jpeg",
     tag: "Comprehensive Support",
     title: ["Reliable ", <em key="e">Maintenance</em>, " & Support"],
     description:
@@ -99,12 +103,17 @@ export default function HeroSection() {
           className="absolute inset-0"
           style={{ opacity: idx === current ? 1 : 0, transition: "opacity 0.9s cubic-bezier(0.4,0,0.2,1)" }}
         >
-          <img
-            src={slide.image}
-            alt={slide.tag}
-            className="w-full h-full object-cover"
-            style={{ transform: idx === current ? "scale(1)" : "scale(1.05)", transition: "transform 7s ease-out" }}
-          />
+          <picture>
+            {slide.mobileImage && (
+              <source media="(max-width: 639px)" srcSet={slide.mobileImage} />
+            )}
+            <img
+              src={slide.image}
+              alt={slide.tag}
+              className="w-full h-full object-cover"
+              style={{ transform: idx === current ? "scale(1)" : "scale(1.05)", transition: "transform 7s ease-out" }}
+            />
+          </picture>
           {/* Overlays — complex gradients kept as inline */}
           <div
             className="absolute inset-0"
