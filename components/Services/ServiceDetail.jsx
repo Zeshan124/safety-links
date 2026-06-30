@@ -39,7 +39,6 @@ export default function ServiceDetail(/** @type {{ service: ReturnType<typeof im
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap');
         .sd-font  { font-family: 'DM Sans', sans-serif; }
         .sd-serif { font-family: 'Cormorant Garamond', serif; }
 

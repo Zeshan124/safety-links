@@ -87,7 +87,6 @@ export default function ProjectsPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
         .pgp-font { font-family: 'DM Sans', sans-serif; }
         .pgp-serif { font-family: 'Cormorant Garamond', serif; }
         .pgp-eyebrow {

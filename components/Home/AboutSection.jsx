@@ -27,7 +27,6 @@ export default function AboutSection() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
         .ab-font { font-family: 'DM Sans', sans-serif; }
         .ab-serif { font-family: 'Cormorant Garamond', serif; }
         .ab-eyebrow {

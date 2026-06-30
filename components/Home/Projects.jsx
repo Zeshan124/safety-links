@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { MapPin } from "lucide-react";
 
@@ -64,7 +65,6 @@ export default function Projects() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap');
         .pj-font { font-family: 'DM Sans', sans-serif; }
         .pj-serif { font-family: 'Cormorant Garamond', serif; }
         .pj-eyebrow {
@@ -113,9 +113,6 @@ export default function Projects() {
           cursor: pointer;
         }
         .pj-card-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
           transition: transform 0.6s ease, filter 0.4s ease;
         }
         .pj-card:hover .pj-card-img {
@@ -221,13 +218,13 @@ export default function Projects() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map((project) => (
               <div key={project.id} className="pj-card">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="pj-card-img"
-                  onError={(e) => {
-                    /** @type {HTMLImageElement} */ (e.target).src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80";
-                  }}
+                  style={{ objectFit: "cover" }}
                 />
                 <div className="pj-card-overlay" />
                 <div className="pj-deco-line" />

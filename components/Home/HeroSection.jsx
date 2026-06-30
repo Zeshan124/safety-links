@@ -85,9 +85,7 @@ export default function HeroSection() {
       className="relative overflow-hidden h-screen min-h-[600px] bg-[#0a1628]"
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
-      {/* Import fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap');
         .hero-title-el { font-family: 'Cormorant Garamond', serif; }
         .hero-title-el em { font-style: italic; color: #279B51; }
         @keyframes fadeUp {

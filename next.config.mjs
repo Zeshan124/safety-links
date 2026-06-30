@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // Allow Next.js <Image> to optimize images from these external domains
     remotePatterns: [
       { protocol: "https", hostname: "safetylinks.org" },
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
-    // Serve modern formats — browsers that support WebP/AVIF get much smaller files
     formats: ["image/avif", "image/webp"],
-    // Reasonable cache TTL for production assets
-    minimumCacheTTL: 86400,
+    // 1-year cache for optimized images — safe because Next.js busts the URL on content change
+    minimumCacheTTL: 31536000,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
 };
 

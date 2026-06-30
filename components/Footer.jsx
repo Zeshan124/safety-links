@@ -53,7 +53,6 @@ export default function Footer() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap');
         .ft-font { font-family: 'DM Sans', sans-serif; }
         .ft-serif { font-family: 'Cormorant Garamond', serif; }
         .ft-nav-link {

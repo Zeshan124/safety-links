@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const services = [
@@ -60,7 +61,6 @@ export default function Services() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap');
         .sv-font { font-family: 'DM Sans', sans-serif; }
         .sv-serif { font-family: 'Cormorant Garamond', serif; }
         .sv-card {
@@ -80,9 +80,6 @@ export default function Services() {
           transform: scale(1.06);
         }
         .sv-card-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
           transition: transform 0.5s ease;
         }
         .sv-tag {
@@ -172,13 +169,13 @@ export default function Services() {
 
                 {/* Image */}
                 <div style={{ position: "relative", height: 200, overflow: "hidden", background: "#e8e4dc" }}>
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="sv-card-img"
-                    onError={(e) => {
-                      e.target.src = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80";
-                    }}
+                    style={{ objectFit: "cover" }}
                   />
                   {/* Overlay */}
                   <div style={{
