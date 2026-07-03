@@ -9,7 +9,7 @@ export default function StatsSection() {
       description: "Across all four pillars"
     },
     {
-      number: "500+",
+      number: "2000+",
       label: "AI Certifications",
       description: "Completed successfully"
     },

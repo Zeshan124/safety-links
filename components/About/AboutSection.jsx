@@ -5,8 +5,8 @@ import { Award, Wrench, HeadphonesIcon, Users, Shield, Clock, Phone } from "luci
 import PageHero from "@/components/Projects/PageHero";
 
 const miniStats = [
-  { value: "500+", label: "Projects Done"    },
-  { value: "10+",  label: "Years Experience" },
+  { value: "2000+", label: "Projects Done"    },
+  { value: "15+",  label: "Years Experience" },
   { value: "300+", label: "Happy Clients"    },
 ];
 
@@ -234,7 +234,7 @@ export default function AboutSection() {
                   boxShadow: "0 8px 28px rgba(10,22,40,0.25)",
                   zIndex: 10,
                 }}>
-                  <div className="ab-serif" style={{ fontSize: 32, fontWeight: 700, color: "#f0ece4", lineHeight: 1 }}>10+</div>
+                  <div className="ab-serif" style={{ fontSize: 32, fontWeight: 700, color: "#f0ece4", lineHeight: 1 }}>15+</div>
                   <div style={{ fontSize: 10, color: "rgba(240,236,228,0.5)", letterSpacing: "0.5px", marginTop: 3 }}>
                     Years of Excellence
                   </div>

@@ -124,7 +124,7 @@ export default function AboutSection() {
                 boxShadow: "0 24px 64px rgba(10,22,40,0.18)",
               }}>
                 <img
-                  src="/images/home/Karachi_Leading.jpeg"
+                  src="/images/home/6.jpeg"
                   alt="Safety Links team at work"
                   style={{ width: "100%", height: 400, objectFit: "cover", display: "block" }}
                 />
@@ -147,7 +147,7 @@ export default function AboutSection() {
                 zIndex: 10,
               }}>
                 <div className="ab-serif" style={{ fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>
-                  10+
+                  15+
                 </div>
                 <div style={{ fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
                   Years of Excellence

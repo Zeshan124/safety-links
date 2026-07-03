@@ -8,10 +8,10 @@ import PageHero from "@/components/Projects/PageHero";
 const categories = ["All", "Swing Gates", "Sliding Gates", "Roller Shutters", "Glass Doors", "Barrier Gates"];
 
 const stats = [
-  { label: "Projects Completed", value: "500+" },
+  { label: "Projects Completed", value: "2000+" },
   { label: "Cities Covered",     value: "5+"   },
   { label: "Commercial Clients", value: "200+" },
-  { label: "Years Active",       value: "10+"  },
+  { label: "Years Active",       value: "15+"  },
 ];
 
 const works = [
@@ -49,7 +49,7 @@ const works = [
     id: 6, category: "Swing Gates", year: "2024",
     title: "Gated Community Entrance",
     location: "Bahria Town, Karachi",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/images/home/Swing_Gates_Bahria.jpeg",
   },
   {
     id: 7, category: "Sliding Gates", year: "2023",

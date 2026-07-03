@@ -10,7 +10,7 @@ const projects = [
   {
     id: 1,
     category: "Swing Gates",
-    title: "DHA Residence, Phase V",
+    title: "DHA Residence, Karachi",
     location: "Karachi",
     image: "/images/home/Swing_Gates_DHA.jpeg",
     number: "01",
@@ -28,7 +28,7 @@ const projects = [
     category: "Glass Doors",
     title: "Corporate Office Entrance",
     location: "PECHS, Karachi",
-    image: "/images/home/sensor_glass_door.jpg",
+    image: "/images/home/glass-doors.jpeg",
     number: "03",
   },
   {

@@ -8,10 +8,10 @@ import PageHero from "./PageHero";
 const categories = ["All", "Swing Gates", "Sliding Gates", "Roller Shutters", "Glass Doors", "Barrier Gates"];
 
 const stats = [
-  { label: "Projects Completed", value: "500+" },
+  { label: "Projects Completed", value: "2000+" },
   { label: "Cities Covered", value: "5+" },
   { label: "Commercial Clients", value: "200+" },
-  { label: "Years Active", value: "10+" },
+  { label: "Years Active", value: "15+" },
 ];
 
 const projects = [
@@ -47,37 +47,37 @@ const projects = [
     id: 5, category: "Swing Gates", year: "2024",
     title: "Gated Community Entrance",
     location: "Bahria Town, Karachi",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/images/home/Swing_Gates_Bahria.jpeg",
     desc: "Grand double swing gate with guard booth integration, CCTV, and RFID access for a luxury community.",
   },
   {
     id: 6, category: "Sliding Gates", year: "2023",
     title: "Pharmaceutical Factory",
     location: "SITE Area, Karachi",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+    image: "/images/home/6.jpeg",
     desc: "Cantilever sliding gate for a GMP-certified factory requiring dust-free, track-less operation.",
   },
-  {
-    id: 7, category: "Barrier Gates", year: "2023",
-    title: "Shopping Mall Car Park",
-    location: "Dolmen Mall, Karachi",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
-    desc: "12-lane barrier gate system with ANPR cameras, ticketing integration, and LED arms.",
-  },
-  {
-    id: 8, category: "Roller Shutters", year: "2023",
-    title: "Retail Strip",
-    location: "Tariq Road, Karachi",
-    image: "https://safetylinks.org/wp-content/uploads/2019/11/roller-shutter@2x.jpg",
-    desc: "Six individual motorized shutters with synchronized timer control for a retail strip.",
-  },
-  {
-    id: 9, category: "Swing Gates", year: "2022",
-    title: "School Campus",
-    location: "Gulshan-e-Iqbal, Karachi",
-    image: "https://safetylinks.org/wp-content/uploads/2025/04/swing.jpg",
-    desc: "School entrance swing gate with safety stop sensors and bell-schedule-triggered automation.",
-  },
+  // {
+  //   id: 7, category: "Barrier Gates", year: "2023",
+  //   title: "Shopping Mall Car Park",
+  //   location: "Dolmen Mall, Karachi",
+  //   image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+  //   desc: "12-lane barrier gate system with ANPR cameras, ticketing integration, and LED arms.",
+  // },
+  // {
+  //   id: 8, category: "Roller Shutters", year: "2023",
+  //   title: "Retail Strip",
+  //   location: "Tariq Road, Karachi",
+  //   image: "https://safetylinks.org/wp-content/uploads/2019/11/roller-shutter@2x.jpg",
+  //   desc: "Six individual motorized shutters with synchronized timer control for a retail strip.",
+  // },
+  // {
+  //   id: 9, category: "Swing Gates", year: "2022",
+  //   title: "School Campus",
+  //   location: "Gulshan-e-Iqbal, Karachi",
+  //   image: "https://safetylinks.org/wp-content/uploads/2025/04/swing.jpg",
+  //   desc: "School entrance swing gate with safety stop sensors and bell-schedule-triggered automation.",
+  // },
 ];
 
 export default function ProjectsPage() {

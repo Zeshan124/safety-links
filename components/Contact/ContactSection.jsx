@@ -9,19 +9,19 @@ const contactInfo = [
     icon: MapPin,
     label: "Our Office",
     lines: ["12-C Mezzanine Floor, Street 07", "Badar Commercial, DHA Phase V", "Karachi"],
-    action: { label: "Get Directions", href: "https://maps.google.com/?q=Badar+Commercial+DHA+Phase+V+Karachi" },
+    action: { label: "Get Directions", href: "https://maps.google.com/?q=24.8002627,67.0453723" },
   },
   {
     icon: Phone,
     label: "Call Us",
     lines: ["021-35244550", "0321-2508452"],
-    action: { label: "Call Now", href: "tel:02135244550" },
+    action: { label: "Call Now", href: "tel:03212508451" },
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     lines: ["0321-2508451"],
-    action: { label: "Chat on WhatsApp", href: "https://wa.me/923212508451" },
+    action: { label: "Chat on WhatsApp", href: "https://wa.me/923212508452" },
   },
   {
     icon: Mail,
@@ -396,7 +396,7 @@ export default function ContactSection() {
             <div className="ct-map mt-10" style={{ height: 380 }}>
               <iframe
                 title="Safety Links Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9!2d67.0833!3d24.8138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQ4JzQ5LjciTiA2N8KwMDUnMDAuMCJF!5e0!3m2!1sen!2spk!4v1234567890"
+                src="https://maps.google.com/maps?q=24.8002627,67.0453723&z=17&output=embed"
                 width="100%"
                 height="380"
                 style={{ border: 0, display: "block" }}
