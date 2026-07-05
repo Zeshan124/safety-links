@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { ChevronUp, ChevronDown, Shield, Star, Users } from "lucide-react";
+import { ChevronUp, ChevronDown, Shield, Star } from "lucide-react";
 
 const slides = [
   {
