@@ -59,7 +59,7 @@ const slides = [
 const stats = [
   { icon: Shield, label: "Projects Completed", value: "3000+" },
   { icon: Star, label: "Years of Experience", value: "12+" },
-  { icon: Users, label: "Happy Clients", value: "2000+" },
+  // { icon: Users, label: "Happy Clients", value: "2000+" },
 ];
 
 export default function HeroSection() {

@@ -5,10 +5,10 @@ import { Phone, Home, Building2, Warehouse, Landmark, Heart, BookOpen } from "lu
 import PageHero from "@/components/Projects/PageHero";
 
 const stats = [
-  { label: "Happy Clients", value: "300+" },
+  // { label: "Happy Clients", value: "300+" },
   { label: "Corporate Partners", value: "50+" },
   { label: "Repeat Business Rate", value: "85%" },
-  { label: "Years Trusted", value: "10+" },
+  { label: "Years Trusted", value: "12+" },
 ];
 
 const sectors = [

@@ -419,10 +419,10 @@ export default function Navbar() {
                 background: "#f9fffe",
               }}>
                 <a
-                  href="tel:02135244550"
+                  href="tel:03212508451"
                   className="nb-cta-btn flex justify-center items-center w-full text-xs py-3.5 px-5 mb-4"
                 >
-                  <Phone size={14} /> Call Now — 021-35244550
+                  <Phone size={14} /> Call Now — 0321-2508451
                 </a>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "#6b7280", fontSize: 12 }}>

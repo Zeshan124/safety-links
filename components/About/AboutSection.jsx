@@ -7,7 +7,7 @@ import PageHero from "@/components/Projects/PageHero";
 const miniStats = [
   { value: "2000+", label: "Projects Done"    },
   { value: "12+",  label: "Years Experience" },
-  { value: "300+", label: "Happy Clients"    },
+  // { value: "300+", label: "Happy Clients"    },
 ];
 
 const values = [

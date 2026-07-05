@@ -29,7 +29,7 @@ export default function StatsSection() {
       description: "Across industries"
     },
     {
-      number: "15+",
+      number: "12+",
       label: "Years Experience",
       description: "In strategic consulting"
     }
