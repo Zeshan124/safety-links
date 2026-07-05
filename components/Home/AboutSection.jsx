@@ -147,7 +147,7 @@ export default function AboutSection() {
                 zIndex: 10,
               }}>
                 <div className="ab-serif" style={{ fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>
-                  15+
+                  12+
                 </div>
                 <div style={{ fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
                   Years of Excellence

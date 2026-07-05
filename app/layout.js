@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 // Only the 3 weights actually used across the site — cuts font payload from ~436 KB to ~145 KB
 const metropolis = localFont({
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${metropolis.variable} antialiased`} suppressHydrationWarning>
         {children}
+        <WhatsAppWidget />
       </body>
     </html>
   );

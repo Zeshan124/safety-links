@@ -113,7 +113,7 @@ export default function ServiceDetail(/** @type {{ service: ReturnType<typeof im
       <div className="sd-font">
 
         {/* ── Full-bleed hero ── */}
-        <div style={{ position: "relative", overflow: "hidden", height: "clamp(280px, 36vw, 460px)", background: "#0a1628" }}>
+        <div style={{ position: "relative", overflow: "hidden", height: "clamp(280px, 36vw, 560px)", background: "#0a1628" }}>
           <img
             src={service.heroImage || service.image}
             alt={service.title}

@@ -4,7 +4,7 @@ import ContactSection from "@/components/Contact/ContactSection";
 
 export const metadata = {
   title: "Contact Us | Safety Links",
-  description: "Get in touch with Safety Links for a free quote, site survey, or any gate automation enquiry. Call 021-35244550 or WhatsApp 0321-2508451.",
+  description: "Get in touch with Safety Links for a free quote, site survey, or any gate automation enquiry. Call 021-35244550 or WhatsApp 0321-2508452.",
 };
 
 export default function ContactPage() {

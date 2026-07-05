@@ -14,13 +14,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Call Us",
-    lines: ["021-35244550", "0321-2508452"],
+    lines: ["021-35244550", "0321-2508451"],
     action: { label: "Call Now", href: "tel:03212508451" },
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    lines: ["0321-2508451"],
+    lines: ["0321-2508452"],
     action: { label: "Chat on WhatsApp", href: "https://wa.me/923212508452" },
   },
   {
@@ -316,7 +316,7 @@ export default function ContactSection() {
                           {sending ? <span className="ct-spinner" /> : <Send size={14} />}
                           {sending ? "Sending…" : "Send Message"}
                         </button>
-                        <a href="https://wa.me/923212508451" target="_blank" rel="noopener noreferrer" className="ct-wa-btn">
+                        <a href="https://wa.me/923212508452" target="_blank" rel="noopener noreferrer" className="ct-wa-btn">
                           <MessageCircle size={16} />
                           Chat on WhatsApp
                         </a>
@@ -362,17 +362,17 @@ export default function ContactSection() {
                         <Phone size={14} style={{ color: "#279B51", flexShrink: 0 }} />
                         <div>
                           <div style={{ fontSize: 10, color: "#9ca3af", letterSpacing: "0.5px", textTransform: "uppercase" }}>Call</div>
-                          <div style={{ fontSize: 13, color: "#374151", fontWeight: 500 }}>021-35244550</div>
+                          <div style={{ fontSize: 13, color: "#374151", fontWeight: 500 }}>03212508451</div>
                         </div>
                       </a>
-                      <a href="https://wa.me/923212508451" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 14px", background: "rgba(37,211,102,0.06)", border: "1px solid rgba(37,211,102,0.2)", borderRadius: 2, textDecoration: "none", transition: "all 0.2s" }}
+                      <a href="https://wa.me/923212508452" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 14px", background: "rgba(37,211,102,0.06)", border: "1px solid rgba(37,211,102,0.2)", borderRadius: 2, textDecoration: "none", transition: "all 0.2s" }}
                         onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#25D366"; e.currentTarget.style.background = "rgba(37,211,102,0.12)"; }}
                         onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(37,211,102,0.2)"; e.currentTarget.style.background = "rgba(37,211,102,0.06)"; }}
                       >
                         <MessageCircle size={14} style={{ color: "#25D366", flexShrink: 0 }} />
                         <div>
                           <div style={{ fontSize: 10, color: "#9ca3af", letterSpacing: "0.5px", textTransform: "uppercase" }}>WhatsApp</div>
-                          <div style={{ fontSize: 13, color: "#374151", fontWeight: 500 }}>0321-2508451</div>
+                          <div style={{ fontSize: 13, color: "#374151", fontWeight: 500 }}>03212508452</div>
                         </div>
                       </a>
                       <a href="mailto:info@safetylinks.org" style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 14px", background: "rgba(39,155,81,0.05)", border: "1px solid rgba(39,155,81,0.15)", borderRadius: 2, textDecoration: "none", transition: "all 0.2s" }}

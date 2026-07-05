@@ -6,7 +6,7 @@ import PageHero from "@/components/Projects/PageHero";
 
 const miniStats = [
   { value: "2000+", label: "Projects Done"    },
-  { value: "15+",  label: "Years Experience" },
+  { value: "12+",  label: "Years Experience" },
   { value: "300+", label: "Happy Clients"    },
 ];
 
@@ -20,10 +20,11 @@ const values = [
 ];
 
 const team = [
-  { name: "Engr. Hassan Ali", role: "Founder & CEO",           desc: "10+ years in gate automation and access control. Pioneered Safety Links in 2014." },
-  { name: "Usman Khan",       role: "Head of Installation",     desc: "Factory-trained technician with expertise in swing, sliding, and industrial gate systems." },
-  { name: "Amna Raza",        role: "Client Relations Manager", desc: "Dedicated to ensuring every client gets the best post-installation support and service." },
-  { name: "Tariq Mehmood",    role: "Senior Field Engineer",    desc: "Specialist in commercial projects, barrier systems, and high-speed industrial doors." },
+  { name: "Engr. Muneeb Khan", role: "Founder & CEO",           desc: "10+ years in gate automation and access control. Pioneered Safety Links in 2014." },
+  { name: "NasarUllah Khan",       role: "Head of Installation",     desc: "Factory-trained technician with expertise in swing, sliding, and industrial gate systems." },
+  { name: "Saleem Khan",        role: "Senior after sales and service Engineer", desc: "Dedicated to ensuring every client gets the best post-installation support and service." },
+  { name: "Umair Khan",    role: "Admin Coordinator",    desc: "Specialist in commercial projects, barrier systems, and high-speed industrial doors." },
+  { name: "Amir Mehmood",    role: "Sales Engineer",    desc: "Specialist in Sales and Customer Relations." }
 ];
 
 function getInitials(/** @type {string} */ name) {

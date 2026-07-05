@@ -198,7 +198,7 @@ export default function Navbar() {
             </span>
             <span className="flex items-center gap-1.5" style={{ color: "#F0ECE4", fontSize: 11 }}>
               <Phone size={11} style={{ color: "#279B51" }} />
-              021-35244550 | 0321-2508451
+              021-35244550 | 0321-2508452
             </span>
           </div>
         </div>
@@ -265,7 +265,7 @@ export default function Navbar() {
 
             {/* CTA + hamburger */}
             <div className="flex items-center gap-3">
-              <a href="tel:02135244550" className="nb-cta-btn hidden md:flex">
+              <a href="tel:923212508452" className="nb-cta-btn hidden md:flex">
                 <Phone size={13} /> Call Now
               </a>
               <button
