@@ -11,7 +11,7 @@ const stats = [
   { label: "Projects Completed", value: "2000+" },
   { label: "Cities Covered",     value: "5+"   },
   { label: "Commercial Clients", value: "200+" },
-  { label: "Years Active",       value: "15+"  },
+  { label: "Years Active",       value: "12+"  },
 ];
 
 const works = [
