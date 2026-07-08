@@ -2,6 +2,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
+export const metadata = {
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+};
+
 // Only the 3 weights actually used across the site — cuts font payload from ~436 KB to ~145 KB
 const metropolis = localFont({
   src: [
