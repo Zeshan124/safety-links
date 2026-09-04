@@ -198,7 +198,16 @@ export default function Navbar() {
             </span>
             <span className="flex items-center gap-1.5" style={{ color: "#F0ECE4", fontSize: 11 }}>
               <Phone size={11} style={{ color: "#279B51" }} />
-              021-35244550 | 0321-2508452
+              <a href="tel:+922135244550" style={{ color: "#F0ECE4", textDecoration: "none" }}>021-35244550</a>
+              {" | "}
+              <a
+                href="https://wa.me/923212508452"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#F0ECE4", textDecoration: "none" }}
+              >
+                0321-2508452
+              </a>
             </span>
           </div>
         </div>
@@ -431,7 +440,18 @@ export default function Navbar() {
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#6b7280", fontSize: 12 }}>
                     <Phone size={13} style={{ color: "#279B51", flexShrink: 0 }} />
-                    021-35244550 | 0321-2508451
+                    <span>
+                      <a href="tel:+922135244550" style={{ color: "#6b7280", textDecoration: "none" }}>021-35244550</a>
+                      {" | "}
+                      <a
+                        href="https://wa.me/923212508452"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#6b7280", textDecoration: "none" }}
+                      >
+                        0321-2508452
+                      </a>
+                    </span>
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#6b7280", fontSize: 12 }}>
                     <Clock size={13} style={{ color: "#279B51", flexShrink: 0 }} />
